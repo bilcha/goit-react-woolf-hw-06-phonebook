@@ -1,15 +1,14 @@
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
 
 import styles from './ContactForm.module.css';
 
-const ContactForm = ({ addContact }) => {
+const ContactForm = ({ handleAddContacts }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
-    addContact({ name, number, id: nanoid() });
+    handleAddContacts({ name, number });
     setName('');
     setNumber('');
   }

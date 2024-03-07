@@ -1,6 +1,6 @@
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 
-export const ContactList = ({ contactList, deleteContact }) => {
+export const ContactList = ({ contactList }) => {
   return (
     <ul>
       {contactList.map(item => (
@@ -9,7 +9,6 @@ export const ContactList = ({ contactList, deleteContact }) => {
           id={item.id}
           name={item.name}
           number={item.number}
-          deleteContact={deleteContact}
         />
       ))}
     </ul>
